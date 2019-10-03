@@ -60,5 +60,5 @@
 
 <script>
     let email = document.getElementById('defaultLoginFormEmail');
-    console.log(email);
+    
 </script>

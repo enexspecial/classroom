@@ -8,14 +8,14 @@
                 <div class="col">
                 <div class="mt-5"></div>
                     <!-- Default form register -->
-<form class="text-center border border-light p-5" action="#!">
+<form class="text-center border border-light p-5" action="#!" id="signup-form">
 
 <p class="h4 mb-4">Sign up</p>
 
 <div class="form-row mb-4">
     <div class="col">
         <!-- First name -->
-        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+        <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" value>
     </div>
     <div class="col">
         <!-- Last name -->
@@ -34,7 +34,7 @@
 
 
 <!-- Sign up button -->
-<button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+<button class="btn btn-info my-4 btn-block" type="submit" >Register</button>
 
 <!-- Social register -->
 <p>or sign up with:</p>
@@ -65,3 +65,22 @@
 
 
 <?php require_once 'layouts/footer.php'; ?>
+
+<script type="text/javascript">
+    
+        const signUpForm = document.getElementById('signup-form');
+        signUpForm.addEventListener('click', ()=>{
+            let firstname = document.querySelector('defaultRegisterFormFirstName');
+            let lastname  = document.querySelector('defaultRegisterFormLastName').value;
+            let email     = document.querySelector('defaultRegisterFormEmail').value;
+            let password  = document.querySelector('defaultRegisterFormPassword').value;
+
+            console.log(firstname);
+        });
+
+   
+  
+
+
+
+</script>
